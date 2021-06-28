@@ -1,0 +1,55 @@
+
+
+	import java.util.Scanner;	
+	import java.lang.Math;
+	
+	public class BasicCalculator1 {//class starts
+		
+	public static void main(String[] args) {	//main starts here
+		
+	      // Declaring variables of type Double
+	      double num1=0.0, num2=0.0;	// initialized to default values
+	      int operator; 			 
+	      
+	      // creating an object of Scanner class to read inputs
+	      Scanner obj = new Scanner(System.in);
+	      for(int i=0;i<=6;i++) {
+	    	  
+	      // read operator which operation to be performed
+	      System.out.println("------------CALCULATOR------------");
+	      System.out.println("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. percentage\n6. squareroot\n");
+	      
+	      System.out.print("\nEnter yourchoice : ");
+	      operator = obj.next().charAt(0);
+	      
+	      	      //Ask user to enter two no.
+	      System.out.println("Enter first number");
+	      num1 = obj.nextDouble();
+	      
+	      System.out.println("Enter second number");
+		  num2 = obj.nextDouble();
+		  
+		  
+	      // switch-case statements
+	     switch(operator) {
+	     	 case '1':
+	            System.out.println("Result = "+ (num1+num2));
+	           		 break;
+		 case '2':	System.out.println("Result = "+ (num1-num2));
+				break;
+		 case '3': 	System.out.println("Result = "+ (num1*num2));
+			 	break;
+		 case '4':    System.out.println("Result = "+ (num1/num2));
+				break;
+		 case '5':    System.out.println("Result = "+ (num1%num2));
+				break;
+		case '6':	System.out.println("Result = "+ Math.pow(num1,num2));
+				break;
+		 default:
+		    System.out.println("Invalid operator");
+	      } // end of switch-case
+	      }//end for
+	      	      // close Scanner class object
+	      obj.close();
+	   } //end of main
+	}//end of class
